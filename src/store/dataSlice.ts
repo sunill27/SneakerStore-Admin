@@ -267,7 +267,6 @@ export function deleteProduct(id: string) {
       const response = await APIAuthenticated.delete('/admin/product/' + id);
       if (response.status === 200) {
         dispatch(setStatus(Status.SUCCESS));
-        dispatch(setDeleteProduct({ productId: id }));
       }
     } catch (error) {
       dispatch(setStatus(Status.ERROR));
@@ -280,7 +279,7 @@ export function deleteUser(id: string) {
   return async function deleteUserThunk(dispatch: AppDispatch) {
     dispatch(setStatus(Status.LOADING));
     try {
-      const response = await APIAuthenticated.delete('/users' + id);
+      const response = await APIAuthenticated.delete('/users/' + id);
       if (response.status === 200) {
         dispatch(setStatus(Status.SUCCESS));
         dispatch(setDeleteUser({ userId: id }));
