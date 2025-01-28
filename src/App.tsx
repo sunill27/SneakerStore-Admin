@@ -48,7 +48,7 @@ function App() {
           index
           element={
             <>
-              <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Sneaker Store AdminDashboard" />
               <DefaultLayout>
                 <ECommerce />
               </DefaultLayout>
@@ -59,7 +59,7 @@ function App() {
           path="/calendar"
           element={
             <>
-              <PageTitle title="Calendar | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Calendar " />
               <DefaultLayout>
                 <Calendar />
               </DefaultLayout>
@@ -70,7 +70,7 @@ function App() {
           path="/profile"
           element={
             <DefaultLayout>
-              <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Profile " />
               <Profile />
             </DefaultLayout>
           }
@@ -81,7 +81,7 @@ function App() {
             <DefaultLayout>
               {' '}
               <>
-                <PageTitle title="Form Elements | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+                <PageTitle title="Form Elements " />
                 <FormElements />
               </>
             </DefaultLayout>
@@ -91,7 +91,7 @@ function App() {
           path="/forms/form-layout"
           element={
             <>
-              <PageTitle title="Form Layout | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Form Layout " />
               <DefaultLayout>
                 <FormLayout />
               </DefaultLayout>
@@ -102,7 +102,7 @@ function App() {
           path="/forms/add-category"
           element={
             <>
-              <PageTitle title="Form Layout | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Form Layout " />
               <DefaultLayout>
                 <AddCategory />
               </DefaultLayout>
@@ -113,7 +113,7 @@ function App() {
           path="/tables"
           element={
             <>
-              <PageTitle title="Tables | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Tables " />
               <DefaultLayout>
                 <Tables />
               </DefaultLayout>
@@ -124,7 +124,7 @@ function App() {
           path="/order/:id"
           element={
             <>
-              <PageTitle title="Tables | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Tables " />
               <DefaultLayout>
                 <SingleOrder />
               </DefaultLayout>
@@ -135,7 +135,7 @@ function App() {
           path="/settings"
           element={
             <>
-              <PageTitle title="Settings | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Settings " />
               <DefaultLayout>
                 <Settings />
               </DefaultLayout>
@@ -146,7 +146,7 @@ function App() {
           path="/chart"
           element={
             <>
-              <PageTitle title="Basic Chart | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Basic Chart " />
               <Chart />
             </>
           }
@@ -155,7 +155,7 @@ function App() {
           path="/ui/alerts"
           element={
             <>
-              <PageTitle title="Alerts | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Alerts" />
               <Alerts />
             </>
           }
@@ -164,7 +164,7 @@ function App() {
           path="/ui/buttons"
           element={
             <>
-              <PageTitle title="Buttons | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Buttons" />
               <Buttons />
             </>
           }
