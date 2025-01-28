@@ -137,7 +137,7 @@ export function fetchProducts() {
   return async function fetchProductsThunk(dispatch: AppDispatch) {
     dispatch(setStatus(Status.LOADING));
     try {
-      const response = await APIAuthenticated.get('admin/product');
+      const response = await APIAuthenticated.get('/admin/product');
       if (response.status === 200) {
         const { data } = response.data;
         dispatch(setStatus(Status.SUCCESS));
@@ -200,7 +200,9 @@ export function addProduct(data: AddProduct) {
       });
       if (response.status === 200) {
         dispatch(setStatus(Status.SUCCESS));
-        dispatch(setUsers(response.data.data));
+        dispatch(fetchProducts());
+      } else {
+        dispatch(setStatus(Status.ERROR));
       }
     } catch (error) {
       dispatch(setStatus(Status.ERROR));
@@ -217,6 +219,8 @@ export function addCategory(data: { categoryName: string }) {
       if (response.status === 200) {
         dispatch(setStatus(Status.SUCCESS));
         dispatch(setCategories(response.data.data));
+      } else {
+        dispatch(setStatus(Status.ERROR));
       }
     } catch (error) {
       dispatch(setStatus(Status.ERROR));
@@ -229,7 +233,7 @@ export function fetchCategories() {
   return async function fetchCategoriesThuhnk(dispatch: AppDispatch) {
     dispatch(setStatus(Status.LOADING));
     try {
-      const response = await APIAuthenticated.get('/admin/category');
+      const response = await APIAuthenticated.get('admin/category');
       if (response.status === 200) {
         const { data } = response.data;
         dispatch(setStatus(Status.SUCCESS));
@@ -267,6 +271,9 @@ export function deleteProduct(id: string) {
       const response = await APIAuthenticated.delete('/admin/product/' + id);
       if (response.status === 200) {
         dispatch(setStatus(Status.SUCCESS));
+        dispatch(setDeleteProduct({ productId: id }));
+      } else {
+        dispatch(setStatus(Status.ERROR));
       }
     } catch (error) {
       dispatch(setStatus(Status.ERROR));
@@ -342,7 +349,7 @@ export function singleOrder(id: string) {
 
 //HandleOrderStatus API:
 export function handleOrderStatusById(status: OrderStatus, id: string) {
-  return async function handleOrderStatusThunk(dispatch: AppDispatch) {
+  return async function handleOrderStatusByIdThunk(dispatch: AppDispatch) {
     dispatch(setStatus(Status.LOADING));
     try {
       const response = await APIAuthenticated.patch('/order/admin/' + id, {

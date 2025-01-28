@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import {
-  deleteOrder,
-  fetchOrders,
-  setDeleteProduct,
-} from '../../store/dataSlice';
+import { deleteOrder, fetchOrders } from '../../store/dataSlice';
 import { OrderStatus } from '../../types/data';
 import { Link } from 'react-router-dom';
 
@@ -17,8 +13,6 @@ const TableThree = () => {
 
   const handleDelete = (id: string) => {
     dispatch(deleteOrder(id));
-    dispatch(setDeleteProduct({ productId: id }));
-    // dispatch(fetchOrders());
   };
 
   return (

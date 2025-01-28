@@ -1,17 +1,11 @@
-// import { Link } from 'react-router-dom';
-// import SelectGroupOne from '../../components/Forms/SelectGroup/SelectGroupOne';
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import { API } from '../../http';
-import { addCategory, addProduct, AddProduct } from '../../store/dataSlice';
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { addCategory} from '../../store/dataSlice';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { Status } from '../../types/status';
 import { useNavigate } from 'react-router-dom';
 
-interface Category {
-  id: string;
-  categoryName: string;
-}
+
 const AddCategory = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -44,7 +38,7 @@ const AddCategory = () => {
 
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-1">
         <div className="flex flex-col gap-9">
-          {/* <!-- Product Form --> */}
+          {/* <!-- Category Form --> */}
           <div className="w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
               <h3 className="font-bold text-black dark:text-white">

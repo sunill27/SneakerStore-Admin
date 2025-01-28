@@ -1,17 +1,16 @@
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { useEffect } from 'react';
-import { deleteUser, fetchUsers, setDeleteUser } from '../../store/dataSlice';
+import { deleteUser, fetchUsers } from '../../store/dataSlice';
 
 const TableOne = () => {
   const dispatch = useAppDispatch();
   const { users } = useAppSelector((state) => state.data);
   useEffect(() => {
     dispatch(fetchUsers());
-  }, []);
+  }, [dispatch]);
 
   const handleDelete = (id: string) => {
     dispatch(deleteUser(id));
-    dispatch(setDeleteUser({ userId: id }));
   };
 
   return (

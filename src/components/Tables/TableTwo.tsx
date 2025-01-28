@@ -1,10 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { useEffect } from 'react';
-import {
-  deleteProduct,
-  fetchProducts,
-  setDeleteProduct,
-} from '../../store/dataSlice';
+import { deleteProduct, fetchProducts } from '../../store/dataSlice';
 
 const TableTwo = () => {
   const dispatch = useAppDispatch();
@@ -12,43 +8,42 @@ const TableTwo = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-  }, [dispatch]);
+  }, []);
 
   const handleDelete = (id: string) => {
     dispatch(deleteProduct(id));
-    dispatch(setDeleteProduct({ productId: id }));
   };
 
   return (
-    <div className="rounded-md  border-gray-300 bg-white shadow-md dark:border-gray-600 dark:bg-gray-800">
+    <div className="rounded-md  border-gray-300 bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
       {/* Table Header */}
       <div className="py-6 px-4 md:px-6 xl:px-7.5">
-        <h4 className="text-xl text-black font-semibold dark:text-gray-200">
+        <h4 className="text-xl text-black font-semibold dark:text-white">
           Top Products
         </h4>
       </div>
 
       {/* Column Headers */}
       <div className="grid grid-cols-7 border-t border-gray-300 py-4 px-4 dark:border-gray-600 sm:px-6 xl:px-7.5 font-medium">
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Product Image</p>
         </div>
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Product Name</p>
         </div>
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Category</p>
         </div>
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Price</p>
         </div>
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Stocks</p>
         </div>
-        <div className="col-span-1 flex items-center text-black">
+        <div className="col-span-1 flex items-center text-black dark:text-white">
           <p>Created At</p>
         </div>
-        <div className="col-span-1 flex items-center justify-center text-black">
+        <div className="col-span-1 flex items-center justify-center text-black dark:text-white">
           <p>Actions</p>
         </div>
       </div>

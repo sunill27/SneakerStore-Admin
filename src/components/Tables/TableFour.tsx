@@ -8,6 +8,7 @@ const TableFour = () => {
   useEffect(() => {
     dispatch(fetchCategories());
   }, []);
+
   const handleDelete = (id: string) => {
     dispatch(deleteCategory(id));
   };

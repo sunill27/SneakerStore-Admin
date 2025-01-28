@@ -163,7 +163,7 @@ const SingleOrder = () => {
                     UserName : test
                   </p>
                   <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">
-                    Address : itahari
+                    Address : Dhangadhi
                   </p>
                   <p className="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
                     Phone : 9123123123
